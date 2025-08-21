@@ -1,15 +1,20 @@
-import React, { createContext, useEffect, useReducer } from 'react'
-import {initialState, reducer} from '../reducer/TodoReducer'
+import React, { createContext, useEffect, useReducer } from 'react';
+import {initialState, reducer} from '../reducer/TodoReducer';
 
 const TodoContext = createContext()
 
 const TodoProvider = ({children}) => {
    const [state, dispatch] = useReducer(reducer, initialState , (init)=> {
-    todoFromLocal = JSON.parse(localStorage.getItem('todos'))
+    try{
+   const todoFromLocal = JSON.parse(localStorage.getItem('todos'));
+    return todoFromLocal ? todoFromLocal : init;
+    } catch {
+        return init;
+    }
    })
 
    useEffect(()=>{
-    localStorage.setItem("todos", JSON.stringify(state))
+    localStorage.setItem("todos", JSON.stringify(state));
    }, [state]);
 
   return (
