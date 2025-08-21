@@ -1,0 +1,76 @@
+.todo-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: linear-gradient(to right, #dbeafe, #e9d5ff, #fbcfe8);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px #ffffff;
+}
+
+.todo-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus {
+  border-color: #6366f1;
+  box-shadow: 0px 0px 6px rgba(99, 102, 241, 0.5);
+}
+
+.btn-submit {
+  padding: 12px;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(236, 72, 153, 0.3);
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #4f46e5, #db2777);
+  transform: scale(1.03);
+}

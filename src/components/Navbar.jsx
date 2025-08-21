@@ -1,36 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css"; // Import custom CSS
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">ToDo'S</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/createTask">Add Task</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/taskList">Task List</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
-              </li>
+    <nav className="custom-navbar">
+      <div className="navbar-brand">✨ ToDo'S</div>
 
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  )
-}
+      <ul className="navbar-links">
+        <li>
+          <Link to="/">🏠 Home</Link>
+        </li>
+        <li>
+          <Link to="/createTask">➕ Add Task</Link>
+        </li>
+        <li>
+          <Link to="/taskList">📋 Task List</Link>
+        </li>
+        <li>
+          <Link to="/about">ℹ️ About</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

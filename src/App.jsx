@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import { TodoProvider } from './context/TodoContext'
 import TodoList from './components/TodoList'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/about' element={<About />}></Route>
           <Route path='/taskList' element={<TodoList />}></Route>
         </Routes>
+        <Footer />
         </TodoProvider>
     </BrowserRouter>
   )
