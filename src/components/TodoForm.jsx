@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { TodoContext } from "../context/TodoContext";
-import "./TodoForm.css"; // Import custom CSS
+import "./TodoForm.css";
 
 const TodoForm = () => {
   const [name, setName] = useState("");
@@ -11,9 +11,10 @@ const TodoForm = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     try {
       if (!name.trim()) return;
-      const payload = { name, description };
+      const payload = { name, description, startDate, endDate};
       dispatch({ type: "ADD_TODO", payload });
       setName("");
       setDescription("");
